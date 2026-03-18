@@ -126,8 +126,6 @@ This deployment was migrated from a VSCode devcontainer (Docker-in-Docker with v
 **Before**: Running in devcontainer, DinD with vfs storage (slow), VSCode-dependent
 **After**: systemd user service, host Docker with overlay2 (fast), 24/7 independent operation
 
-See [docs/migrate-to-host-systemd.md](docs/migrate-to-host-systemd.md) for full migration documentation.
-
 ## Troubleshooting
 
 ### Service won't start
@@ -315,7 +313,6 @@ To keep your fork clean while preserving the ability to merge upstream updates:
 ## Reference Documents
 
 - [README.md](README.md) - Upstream project documentation
-- [docs/migrate-to-host-systemd.md](docs/migrate-to-host-systemd.md) - Migration guide
 - [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) - Architecture decisions
 - [CLAUDE.md](CLAUDE.md) - Quick context for Claude Code
 - [scripts/install-systemd-service.sh](scripts/install-systemd-service.sh) - Service installation script
