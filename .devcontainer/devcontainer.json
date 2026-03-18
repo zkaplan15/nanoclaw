@@ -1,0 +1,29 @@
+{
+	"name": "NanoClaw Development Container",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile.new"
+	},
+	// Mount host Docker socket to use Docker from within devcontainer
+	"mounts": [
+		"source=/run/docker.sock,target=/run/docker.sock,type=bind",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
+	],
+	"postCreateCommand": "npm install",
+
+	// Configure tool-specific properties
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"ms-vscode.vscode-typescript-next"
+			]
+		}
+	},
+
+	// Use the node user (non-root)
+	"remoteUser": "node",
+
+	"overrideCommand": false
+}

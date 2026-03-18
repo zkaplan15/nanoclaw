@@ -8,6 +8,8 @@ dist/
 store/
 data/
 logs/
+nanoclaw.db
+nanoclaw.pid
 
 # Groups - only track base structure and specific CLAUDE.md files
 groups/*
@@ -34,5 +36,8 @@ groups/global/*
 
 # Skills system (local per-installation state)
 .nanoclaw/
+
+# Claude Code local settings
+.claude/settings.local.json
 
 agents-sdk-docs
